@@ -4,23 +4,307 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="https://fav.farm/%F0%9F%A7%A2" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React from the Ground</title>
+    <title>React from the Ground / Slides / Hendra Agil</title>
+    <meta
+      name="og:title"
+      content="React from the Ground / Slides / Hendra Agil"
+    />
+    <meta
+      name="description"
+      content="Slides for React from the Ground by Hendra Agil"
+    />
+    <meta
+      name="og:description"
+      content="Slides for React from the Ground by Hendra Agil"
+    />
+    <meta name="author" content="@hendraaagil" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/react-from-the-ground/assets/index-Bez-f45t.js"></script>
-    <link rel="stylesheet" crossorigin href="/react-from-the-ground/assets/index-CFu9EZ4A.css">
+    <script type="module" crossorigin src="/react-from-the-ground/assets/index-Domy3wsW.js"></script>
+    <link rel="stylesheet" crossorigin href="/react-from-the-ground/assets/index-B8z6vscs.css">
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <section>
           <h2>React from the Ground 🌏</h2>
+
+          <aside class="notes">Disclaimer: tidak akan ada live coding :D</aside>
         </section>
-        <section><h2>Thank You!</h2></section>
+
+        <section>
+          <h2>❓ whoami</h2>
+          <hr />
+          <p class="fragment fade-up"><strong>Hendra</strong> Agil</p>
+          <a
+            href="https://hendraaagil.dev"
+            target="_blank"
+            class="fragment fade-up"
+            >hendraaagil.dev</a
+          >
+
+          <aside class="notes">Jelaskan siapa saya ...</aside>
+        </section>
+
+        <section>
+          <section>
+            <h2>🤔 React</h2>
+            <img
+              src="/react-from-the-ground/react.png"
+              alt="React website"
+              class="fragment fade-up"
+            />
+
+            <aside class="notes">
+              <p>React itu apa sih..</p>
+              <p>
+                Seperti yang tercantum di website-nya, react adalah library
+                untuk membantu kita membangun antarmuka web dan native (RN)
+              </p>
+            </aside>
+          </section>
+
+          <section>
+            <h3>🤯 Skena frontend saat ini</h3>
+            <img src="/react-from-the-ground/web-chaos.jpeg" alt="Web chaos" />
+            <a
+              href="https://x.com/yoavbls/status/1829570644692123802"
+              target="_blank"
+              style="font-size: 1.5rem"
+              >https://x.com/yoavbls/status/1829570644692123802</a
+            >
+
+            <aside class="notes">
+              <p>React jg masuk ke skena frontend saat ini ygy</p>
+              <p>Main-mainlah sama gambarnya...</p>
+            </aside>
+          </section>
+
+          <section>
+            <img src="/react-from-the-ground/react-uwu.png" alt="React uwu" />
+
+            <aside class="notes">anyway.. mari fokus ke React saja</aside>
+          </section>
+        </section>
+
+        <section>
+          <h3>🤓 How to start</h3>
+          <p class="fragment fade-down">Paham HTML + CSS + JS dulu</p>
+          <p class="fragment fade-down">(+) Paham module bundler</p>
+          <a
+            href="https://react.dev/learn"
+            target="_blank"
+            class="fragment fade-up"
+            >https://react.dev/learn</a
+          >
+          <p class="fragment fade-up">
+            Versi Indonesia:
+            <a href="https://id.react.dev/learn" target="_blank"
+              >https://id.react.dev/learn</a
+            >
+          </p>
+
+          <aside class="notes">
+            <p>Gimana mulainya? dari docs aja krn sdh sangat jelas</p>
+            <p>Gbs basa enggres.. ada versi ID, mau alasan apa lagi?</p>
+            <p>Main-main di docs, highlight beberapa:</p>
+            <ul>
+              <li>Component life cycle</li>
+              <li>State manajemen</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <h3>😁 Mending langsung Next.js atau React dulu bang?</h3>
+          <img
+            src="/react-from-the-ground/it-depends.jpg"
+            alt="It depends meme"
+            class="fragment fade-up"
+          />
+
+          <aside class="notes">
+            <p>
+              Pertanyaan yang sering muncul, paling ga sebulan sekali pasti ada
+              yg nanyain
+            </p>
+            <p>
+              Dan jawaban yang paling sering muncul adalah ... ada yg bisa
+              nebak?
+            </p>
+          </aside>
+        </section>
+
+        <section>
+          <section data-auto-animate>
+            <p>Next.js punya konsep dan aturan sendiri.</p>
+            <img
+              src="/react-from-the-ground/app-vs-pages.png"
+              alt="App vs pages router Next.js"
+              class="fragment fade-up"
+            />
+            <p
+              class="fragment fade-up"
+              style="font-size: 1.5rem; margin-top: 0"
+            >
+              Server first vs Client first
+            </p>
+
+            <aside class="notes">
+              Ada 2 konsep di Next.js app & pages router
+            </aside>
+          </section>
+
+          <section data-auto-animate>
+            <h3>Pages router (client first)</h3>
+            <ul>
+              <li class="fragment">SSR (<code>getServerSideProps</code>)</li>
+              <li class="fragment">SSG (<code>getStaticProps</code>)</li>
+              <li class="fragment">CSR (<code>useEffect</code>)</li>
+              <li class="fragment">API routes (<code>pages/api/*</code>)</li>
+              <li class="fragment">Etc.</li>
+            </ul>
+
+            <aside class="notes">
+              Konsep pertama dari Next.js sebelum ada App router.. Jelasin lah
+              per poin
+            </aside>
+          </section>
+
+          <section data-auto-animate>
+            <h3>App router (server first)</h3>
+            <ul>
+              <li class="fragment">
+                Client component (<code>use client</code>)
+              </li>
+              <li class="fragment">Server Action (<code>use server</code>)</li>
+              <li class="fragment">React Server Component (RSC)</li>
+              <li class="fragment">
+                <span>New routing</span>
+                <ul>
+                  <li>layout.tsx</li>
+                  <li>page.tsx</li>
+                  <li>route.ts</li>
+                </ul>
+              </li>
+              <li class="fragment">Partial prerendering (experimental)</li>
+              <li class="fragment">Etc.</li>
+            </ul>
+
+            <aside class="notes">
+              Konsep baru dari Next.js yang dikenalkan sejak versi 13.. Jelasin
+              lah per poin
+            </aside>
+          </section>
+
+          <section data-auto-animate>
+            <img
+              src="/react-from-the-ground/welcome-to-next.png"
+              alt="Welcome to Next.js"
+              class="fragment fade-up"
+            />
+
+            <aside class="notes">Dan ya.. welcome to ..</aside>
+          </section>
+        </section>
+
+        <section>
+          <h3>😭 Bang pusing pake Next, bisa pake React aja ga?</h3>
+          <p class="fragment fade-up">Bisa aja, tapi ..</p>
+          <p class="fragment fade-up">Perlu banyak manual setup.</p>
+          <p class="fragment fade-up">Atau opsi lain ...</p>
+
+          <aside class="notes">
+            <p>Bisa aja, tapi perlu banyak setup manual..</p>
+            <p>
+              Contohnya pengen SEO bagus, ya berarti halamannya harus
+              pre-rendered di server karena search engine (google) ga mungkin
+              evaluate kode JS per website. Artinya full konten harus ada di
+              HTML, ga bisa dynamically load via JS. Salah satu yang bisa bantu
+              adalah Next.js.
+            </p>
+            <p>(munculin opsi lain)</p>
+          </aside>
+        </section>
+
+        <section>
+          <h4>💍 Find ur match!</h4>
+          <img
+            src="/react-from-the-ground/web-chaos.jpeg"
+            alt="Web chaos"
+            style="
+              max-height: 200px;
+              width: 100%;
+              object-fit: cover;
+              object-position: top;
+            "
+          />
+
+          <aside class="notes">
+            <p>
+              Tapi tentu tiap framework konsepnya berbeda dan pahami dulu
+              sebelum pilih sesuai kebutuhan
+            </p>
+            <p>Improve lah pake bercandaan dikit-dikit</p>
+          </aside>
+        </section>
+
+        <section>
+          <h3>🐣 React Ecosystem</h3>
+          <p>
+            <a href="https://2023.stateofreact.com/en-US/" target="_blank"
+              >State of React 2023</a
+            >
+          </p>
+          <p>
+            <a
+              href="https://survey.devographics.com/en-US/survey/state-of-react/2024"
+              target="_blank"
+              >State of React 2024 (Open)</a
+            >
+          </p>
+
+          <aside class="notes">
+            <p>
+              Ketika semakin kompleks kebutuhannya, terkadang diperlukan
+              tambahan library lagi (jadi importir)
+            </p>
+            <p>Jika bingung pakai library apa, coba ke ..</p>
+          </aside>
+        </section>
+
+        <section>
+          <h3>📰 Rekomendasi Newsletter</h3>
+          <p>
+            <a href="https://syntax.fm/snackpack" target="_blank">Syntax.fm</a>
+          </p>
+          <p><a href="https://bytes.dev/" target="_blank">Bytes (ui.dev)</a></p>
+          <p>
+            <a href="https://thisweekinreact.com/" target="_blank"
+              >This Week in React</a
+            >
+          </p>
+
+          <aside class="notes">
+            Ini beberapa newsletter yang bisa diikuti untuk update terbaru, ga
+            cuma soal react, tapi lebih ke web dev secara umum
+          </aside>
+        </section>
+
+        <section>
+          <h3>🍌 Thanks!</h3>
+          <img
+            src="https://media1.tenor.com/m/d-fyhomsP6kAAAAC/minions-muchas-gracias.gif"
+            alt="Gracias"
+          />
+          <p class="fragment fade-right" style="font-size: 1.75rem">
+            Any questions?
+          </p>
+        </section>
       </div>
     </div>
 
